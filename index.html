@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TUP Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <img class="image" src="Images/des_UIPEN.png" alt="tup_pic" />
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Course</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Admin</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <div class="box">
+        <h1>Welcome <strong>TUPians</strong></h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed qui
+          consequatur culpa porro <br />
+          harum molestias dolorum ullam illo sapiente eveniet.
+        </p>
+        <a href="#" class="about-us">Know More About TUP</a>
+      </div>
+    </section>
+
+    <section class="course">
+      <h1 class="h1-course"><strong>Education</strong> We Offer</h1>
+      <p class="p-course">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad atque
+        molestiae ipsum. Ullam dicta similique qui <br />
+        earum aperiam molestias voluptas cumque, eum fugit. Cum eaque quisquam
+        laboriosam quibusdam, exercitationem saepe?
+      </p>
+
+      <div class="row">
+        <div class="col">
+          <h3>Senior High-School</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+            aliquid ipsum eaque aut amet magnam nobis tempore, est sed nesciunt
+            numquam doloribus laborum distinctio asperiores recusandae sunt
+            consectetur placeat reprehenderit?
+          </p>
+        </div>
+        <div class="col">
+          <h3>College</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+            aliquid ipsum eaque aut amet magnam nobis tempore, est sed nesciunt
+            numquam doloribus laborum distinctio asperiores recusandae sunt
+            consectetur placeat reprehenderit?
+          </p>
+        </div>
+        <div class="col">
+          <h3>Post-Graduation</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+            aliquid ipsum eaque aut amet magnam nobis tempore, est sed nesciunt
+            numquam doloribus laborum distinctio asperiores recusandae sunt
+            consectetur placeat reprehenderit?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="campus">
+      <h1><strong>TUP</strong> Campus</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quo sit
+        enim perspiciatis ipsa porro ab, vero <br />
+        omnis modi reiciendis minima at eius recusandae? Optio, fugiat. Dolorum
+        corporis tempore nostrum?
+      </p>
+      <div class="row2">
+        <div class="col2">
+          <img src="Images/campus.jpg" alt="campus" />
+          <div class="title">
+            <h3>TAGUIG</h3>
+          </div>
+        </div>
+        <div class="col2">
+          <img src="Images/campus2.jpg" alt="campus2" />
+          <div class="title">
+            <h3>MANILA</h3>
+          </div>
+        </div>
+        <div class="col2">
+          <img src="Images/campus3.jpg" alt="campus3" />
+          <div class="title">
+            <h3>VISAYAS</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="facilities">
+      <h1>Our Facilities</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex
+        voluptatibus <br />
+        eligendi odit beatae sapiente quaerat saepe alias ab quam?
+      </p>
+      <div class="row3">
+        <div class="col3">
+          <img src="Images/engineering.jpg" alt="it" />
+          <div>
+          <h3 class="fac">Engineering</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+            magni perspiciatis? Exercitationem alias, tempora animi deserunt
+            commodi <br />
+            doloribus dignissimos totam ea placeat eius accusantium rerum
+            aliquid ipsa similique officiis sunt!
+          </p>
+        </div>
+        </div>
+        <div class="col3">
+            <img src="Images/it.jpg" alt="it" />
+            <div>
+            <h3 class="fac">Information Technology</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+              magni perspiciatis? Exercitationem alias, tempora animi deserunt
+              commodi <br />
+              doloribus dignissimos totam ea placeat eius accusantium rerum
+              aliquid ipsa similique officiis sunt!
+            </p>
+        </div>
+          </div>
+          <div class="col3">
+            <img src="Images/chemistry.jpg" alt="it" />
+            <div>
+            <h3 class="fac">Chemistry</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+              magni perspiciatis? Exercitationem alias, tempora animi deserunt
+              commodi <br />
+              doloribus dignissimos totam ea placeat eius accusantium rerum
+              aliquid ipsa similique officiis sunt!
+            </p>
+        </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+  </body>
+</html>
