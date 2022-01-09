@@ -711,7 +711,7 @@ padding: 20px;
 }
 
 .title2 h4{
-      /*change some position per device*/
+    /*change some position per device*/
     opacity: 0;
     position: absolute;
     left: 27%;
