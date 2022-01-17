@@ -1029,3 +1029,111 @@ display: none;
     flex-direction: column;
     }
 }
+
+/*log_in*/
+
+.intro_login{
+    height: 100vh;
+    background: linear-gradient(#ffffff,#C7232B);
+}
+
+.login_nav{
+    width:100%;
+    height: 10vh;
+    background: radial-gradient(#ffffff,#830001); 
+    background-attachment: fixed;
+    padding: 3px 0;
+}
+
+.id_login{
+    font-weight: 700;
+    font-size: 25px;
+    position: absolute;
+    left: 42.5%;
+    top: 14%;
+}
+
+.flexbox-container_login{
+    display:flex;
+}
+
+.flex-item_login{
+    padding: 0 2em 1.1em 2em;
+    height: 281px;
+    width: 426.5px;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0,0.6);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-top: -195px;
+    margin-left: -238.5px;
+    border-radius: 4px;
+    border-style: none;
+    box-shadow: 2px 2px 14px 7px #000;
+}
+.footer_login{
+    font-size: x-small;
+    text-align:center;
+    position: relative;
+    top:75%;
+    line-height: 1.5;
+}
+
+.footer_login hr{
+    margin: 1.5em 0;
+    border: 1px dashed #777;
+}
+
+.user_login{
+    color: white;
+    font-size: .9em;
+    font-weight: 600;
+    padding: 14px 0;
+}
+
+.sign-in_login{
+    padding: .7em 0;
+}
+
+.sign-in_login > input,
+.sign-in_login > select{
+    width:98%;
+    padding: 0.5em 0.5em;
+    font-size: 0.8em;
+    font-family: 'Open Sans',sans-serif, helvetica, arial;
+    outline: none;
+    border: 1px solid transparent;
+    transition: all 250ms ease-out;
+  }
+
+.info_login{
+    font-size: .8em;
+    color:white;
+}
+
+.forgot_login{
+    font-size: .75em;
+}
+
+.red_login{
+    background: #b71921;
+    border: 1px solid #eee;
+    color: #eee;
+    font-size: small;
+    min-width: 6em;
+    padding: 0.5em;
+    cursor: pointer;
+  }
+
+  .divider_login{
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+  }
+
+  .img_login{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    float: right;
+  }
