@@ -1,671 +1,673 @@
-*{
-    /*normal command per*/
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
+* {
+  /*normal command per*/
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
 }
 
-.header{
-    /*kaya naka linear gradient sa pic para mas appealing itsura
+.header {
+  /*kaya naka linear gradient sa pic para mas appealing itsura
     naka min-height para yan lang minimum
     width to 100% para sakop buong screen
     cover para di mag repeat yung pic*/
-    background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(Images/TUP-Home-Page.jpg);
-    min-height: 100vh;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(Images/TUP-Home-Page.jpg);
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
-nav{
-    /*display is flex para macommand yung space between
+nav {
+  /*display is flex para macommand yung space between
     to make the pic and items evenly padding for spacing
     and alignting it to be centered*/
-    display: flex;
-    padding: 2% 2.75%;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  padding: 2% 2.75%;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.nav-links{
-    /* auto para maging horizontally align yung items and to make it centered*/
-    flex: auto;
-    text-align: center;
+.nav-links {
+  /* auto para maging horizontally align yung items and to make it centered*/
+  flex: auto;
+  text-align: center;
 }
 
 .nav-links ul li {
-    /*inline-block para horizontal pa ren siya pag block lang magiging vertically arange
+  /*inline-block para horizontal pa ren siya pag block lang magiging vertically arange
     add some padding for spacing and relative position para dun lang sila sa mismong
     position nila*/
-    display:inline-block;
-    padding: 8px 12px;
-    position: relative; /*optional*/
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative; /*optional*/
 }
 
-.nav-links ul li a{
-    /*controlling the items none decor para mawala underline sa item*/
-    color:white;
-    font-size: large;
-    text-decoration: none;
+.nav-links ul li a {
+  /*controlling the items none decor para mawala underline sa item*/
+  color: white;
+  font-size: large;
+  text-decoration: none;
 }
 
-.nav-links ul li::after{
-    /* making the animation effect width 0% para dun mag umpisa 
+.nav-links ul li::after {
+  /* making the animation effect width 0% para dun mag umpisa 
     block naman dito para di gumalaw items pag inline nagalaw
     margin top lang para mag ka space sa top di masyado dikit*/
-    content: '';
-    width: 0%;
-    height: 2px;
-    background:#eb2f06;
-    display: block;
-    margin: 6px auto auto auto;
-    transition: .5s;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #eb2f06;
+  display: block;
+  margin: 6px auto auto auto;
+  transition: 0.5s;
 }
 
-.nav-links ul li:hover::after{
-    /*dito 100 kasi ito after effect*/
-    width: 100%;
+.nav-links ul li:hover::after {
+  /*dito 100 kasi ito after effect*/
+  width: 100%;
 }
 
-.box{
-    /*width sa laki ng space na sakop nya position absolute 
+.box {
+  /*width sa laki ng space na sakop nya position absolute 
     para fully control mo kung san mo gusto ilagay*/
-    width:90%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-45%);
-    text-align: center;
-    color: white ;
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  text-align: center;
+  color: white;
 }
 
-.box h1{
-    /*palitan font size nung h1*/
-    font-size: 64px;
+.box h1 {
+  /*palitan font size nung h1*/
+  font-size: 64px;
 }
 
-.box h1 strong{
-    /*gaano kabilis yung animation*/
-    transition: .5s;
+.box h1 strong {
+  /*gaano kabilis yung animation*/
+  transition: 0.5s;
 }
 
-.box h1 strong:hover{
-    /*palitan cursor to deafault bali itsura ng normal mouse
+.box h1 strong:hover {
+  /*palitan cursor to deafault bali itsura ng normal mouse
     at dito na gagana animation*/
-    cursor: default;
-    color: #eb2f06;
+  cursor: default;
+  color: #eb2f06;
 }
 
-.box p{
-    /*adding some spacing sa text and changing the font size*/
-    padding: 10px 0 40px;
-    font-size: medium;
+.box p {
+  /*adding some spacing sa text and changing the font size*/
+  padding: 10px 0 40px;
+  font-size: medium;
 }
 
-.about-us{
-    /*decopration none para mawala linya inline-block para di mnasakop lahat width
+.about-us {
+  /*decopration none para mawala linya inline-block para di mnasakop lahat width
     pwede block kaso maglalagay ka pa width pampahaba background transparent para
     kita yung pic at relative para dun siya sa mismong position nya gumana yung
     animation pag wala ganyan buo kasama parent maaanimate.*/
-    text-decoration: none;
-    color: white;
-    font-size: medium;
-    display: inline-block;
-    padding: 12px 34px;
-    border:1px solid white;
-    background: transparent;
-    position: relative; 
+  text-decoration: none;
+  color: white;
+  font-size: medium;
+  display: inline-block;
+  padding: 12px 34px;
+  border: 1px solid white;
+  background: transparent;
+  position: relative;
 }
 
-.about-us::after{
-    /*the animation effect position absolute para dun lang sa loob gagana yung
+.about-us::after {
+  /*the animation effect position absolute para dun lang sa loob gagana yung
     animation with 0 top and left kasi customizable yung position ng animation
     scaleX para horizontal yung animation at origin is center which is dun
     mag uumpisa animation 0 meaning 0ff pa animation*/
-    content: '';
-    min-width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: 1s;
-    background-color: #eb300660;
-  }
-
-  .about-us:hover::after{
-      /*ito after ni 1 para ion yung animation*/
-    transform: scaleX(1);
-  }
-
-  nav .fa{
-      /*none ito para di makita yung item na nilagay naten if papaliitin yung website*/
-    display: none;
-  }
-
-  /*--courses--*/
-
-  .course{
-      /*controlling again the position of the box*/
-      width:100%;
-      margin: auto;
-      text-align: center;
-      padding-top: 100px;
-      background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(Images/TUP.jpg);
-      height: 100%;
-      background-position: center;
-      background-size: cover;
-  }
-
-  .h1-course{
-      /*controlling again the size of font*/
-      font-size: 75px;
-      font-weight: 700;
-      padding: 50px 20px 0 20px;
-      color:rgba(255, 255, 255, 0.875);
-  }
-
-  .h1-course strong{
-    /*gaano kabilis yung animation*/
-    transition: .5s;
+  content: "";
+  min-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: 1s;
+  background-color: #eb300660;
 }
 
-  .h1-course strong:hover{
-    /*palitan cursor to deafault bali itsura ng normal mouse
+.about-us:hover::after {
+  /*ito after ni 1 para ion yung animation*/
+  transform: scaleX(1);
+}
+
+nav .fa {
+  /*none ito para di makita yung item na nilagay naten if papaliitin yung website*/
+  display: none;
+}
+
+/*--courses--*/
+
+.course {
+  /*controlling again the position of the box*/
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(Images/TUP.jpg);
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.h1-course {
+  /*controlling again the size of font*/
+  font-size: 75px;
+  font-weight: 700;
+  padding: 50px 20px 0 20px;
+  color: rgba(255, 255, 255, 0.875);
+}
+
+.h1-course strong {
+  /*gaano kabilis yung animation*/
+  transition: 0.5s;
+}
+
+.h1-course strong:hover {
+  /*palitan cursor to deafault bali itsura ng normal mouse
     at dito na gagana animation*/
-    cursor: default;
-    color: #eb2f06;
-  }
+  cursor: default;
+  color: #eb2f06;
+}
 
-  .p-course{
-      /*controlling the font and spacing*/
-      font-size: x-large;
-      font-weight: 400;
-      line-height: 22px;
-      padding: 20px 20px 0 20px;
-      margin-bottom: 50px;
-      color:rgba(255, 255, 255, 0.875);
-  }
+.p-course {
+  /*controlling the font and spacing*/
+  font-size: x-large;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 20px 20px 0 20px;
+  margin-bottom: 50px;
+  color: rgba(255, 255, 255, 0.875);
+}
 
-  .row{
-      /*again to control the space ngayon top lang and display is flex
+.row {
+  /*again to control the space ngayon top lang and display is flex
       to use the space-between para maging align evenly.*/
-      padding: 75px 50px;
-      display: flex;
-      justify-content: space-between;
-  }
+  padding: 75px 50px;
+  display: flex;
+  justify-content: space-between;
+}
 
-  .col{
-      /* flex-basis laki ng box border radius controlling the 4 sides of the box added
+.col {
+  /* flex-basis laki ng box border radius controlling the 4 sides of the box added
       some spacing and box size is border-box.*/
-      flex-basis: 28.5%;
-      border: 2px solid rgba(255, 255, 255, 0.5);
-      border-radius: 30px;
-      margin-bottom: 10px;
-      padding: 20px 20px;
-      transition: .5s;
-      color: rgba(255, 255, 255, 0.750); 
-      font-size: large;
-      font-weight: 400;
-  }
+  flex-basis: 28.5%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  margin-bottom: 10px;
+  padding: 20px 20px;
+  transition: 0.5s;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: large;
+  font-weight: 400;
+}
 
-  .col p{
-      /*to control spacing*/
-      margin-top: 10px;
-  }
+.col p {
+  /*to control spacing*/
+  margin-top: 10px;
+}
 
-  .col:hover{
-      /*para magkakulay yung box at magkashadow*/
-    transition: .7s;
-    background-color: #eb300660;
-    box-shadow: 0px 0px 40px 0px rgba(255, 0, 0, 0.4);
-  }
+.col:hover {
+  /*para magkakulay yung box at magkashadow*/
+  transition: 0.7s;
+  background-color: #eb300660;
+  box-shadow: 0px 0px 40px 0px rgba(255, 0, 0, 0.4);
+}
 
-  .col::after{
-      /*may lalabas na linya kasi after mo ipoint mouse mo dun sa box*/
-    content: '';
-    width: 100%;
-    display: inline-block;
-    height: 5%;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: .6s;
-    background-color: #00000875;
-  }
+.col::after {
+  /*may lalabas na linya kasi after mo ipoint mouse mo dun sa box*/
+  content: "";
+  width: 100%;
+  display: inline-block;
+  height: 5%;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: 0.6s;
+  background-color: #00000875;
+}
 
-  .col:hover::after{
-      /*animation of box shadow*/
-    transform: scaleX(1);
-  }
+.col:hover::after {
+  /*animation of box shadow*/
+  transform: scaleX(1);
+}
 
-  .col h3{
-        /*gaano kabilis yung animation*/
-    transition: .5s;
-  }
+.col h3 {
+  /*gaano kabilis yung animation*/
+  transition: 0.5s;
+}
 
-  .col h3:hover{
-    /*palitan cursor to deafault bali itsura ng normal mouse
+.col h3:hover {
+  /*palitan cursor to deafault bali itsura ng normal mouse
     at dito na gagana animation*/
-    cursor: default;
-    color: #eb2f06;
-  }
-
-  /*Campus*/
-
-  .campus{
-    /*controlling again the position of the box*/
-    width: 100%;
-    text-align: center;
-    margin: auto;
-    padding-top: 50px;
+  cursor: default;
+  color: #eb2f06;
 }
 
-#try{
-    /*adjust size and spacing*/
-    font-size: 60px;
-    font-style: 600;
-    padding-bottom: 10px;
+/*Campus*/
+
+.campus {
+  /*controlling again the position of the box*/
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  padding-top: 50px;
 }
 
-#try2{
-    /*adjust size*/
-    font-size: x-large;
+#try {
+  /*adjust size and spacing*/
+  font-size: 60px;
+  font-style: 600;
+  padding-bottom: 10px;
 }
 
-.campus h1 strong{
-    /*adjust size and put transition*/
-    font-size: 60px;
-    color:black;
-    transition: .3s;
+#try2 {
+  /*adjust size*/
+  font-size: x-large;
 }
 
-.campus h1 strong:hover{
-      /*palitan cursor to deafault bali itsura ng normal mouse
+.campus h1 strong {
+  /*adjust size and put transition*/
+  font-size: 60px;
+  color: black;
+  transition: 0.3s;
+}
+
+.campus h1 strong:hover {
+  /*palitan cursor to deafault bali itsura ng normal mouse
     at dito na gagana animation*/
-    cursor: default;
-    color: #eb2f06;
+  cursor: default;
+  color: #eb2f06;
 }
 
-.row2{
-    /*flex display para pantay yung spacing kaya between*/
-display: flex;
-justify-content: space-between;
-padding: 20px;
+.row2 {
+  /*flex display para pantay yung spacing kaya between*/
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
 
-.col2{
-    /*flex basis sa spacing at radius sa 4 side command
+.col2 {
+  /*flex basis sa spacing at radius sa 4 side command
     ralative para dun lang siya sa mismo nyang position overflow hidden para pumatong sa pic*/
-    flex-basis: 32%;
-    border-radius: 20px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
+  flex-basis: 32%;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
 }
 
-.col2 img{
-    /*image command*/
-    width: 100%;
-    height: 100vh;
+.col2 img {
+  /*image command*/
+  width: 100%;
+  height: 100vh;
 }
 
-.campus h1{
-    /*adjust size and spacing*/
-    font-size: 40px;
-    font-style: 600;
-    padding-bottom: 10px;
+.campus h1 {
+  /*adjust size and spacing*/
+  font-size: 40px;
+  font-style: 600;
+  padding-bottom: 10px;
 }
 
-.campus p{
-    /*adjust font and spacing*/
-    font-size: large;
-    padding-bottom: 10px;
+.campus p {
+  /*adjust font and spacing*/
+  font-size: large;
+  padding-bottom: 10px;
 }
 
-.title{
-    /*ito yung lalabas sa pic na command*/
-    width: 100%;
-    height: 99.5%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: transparent;
-    transition: .7s;
+.title {
+  /*ito yung lalabas sa pic na command*/
+  width: 100%;
+  height: 99.5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  transition: 0.7s;
 }
 
-.title h3{
-    /*control yung text sa loob ng .title na command or sa pic*/
-    position: absolute;
-    left: 30%;
-    bottom: 20px;
-    color: white;
-    transition: .7s;
-    font-size: 50px;
+.title h3 {
+  /*control yung text sa loob ng .title na command or sa pic*/
+  position: absolute;
+  left: 30%;
+  bottom: 20px;
+  color: white;
+  transition: 0.7s;
+  font-size: 50px;
 }
 
-.title:hover{
-    /*after effect*/
-    background: rgba(4,9,30,0.7);
+.title:hover {
+  /*after effect*/
+  background: rgba(4, 9, 30, 0.7);
 }
 
-.title:hover h3{
-    /*aangat yung text*/
-    position: absolute;
-    left: 30%;
-    bottom: 50vh;
-    font-size: 50px;
+.title:hover h3 {
+  /*aangat yung text*/
+  position: absolute;
+  left: 30%;
+  bottom: 50vh;
+  font-size: 50px;
 }
 
 /*Facilities*/
 
-.facilities{
-    /*command sa section na*/
-    width: 100%;
-    text-align: center;
-    margin: auto;
-    padding-top: 50px;
-    background: rgba(4, 9, 30, 0.090);
+.facilities {
+  /*command sa section na*/
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  padding-top: 50px;
+  background: rgba(4, 9, 30, 0.09);
 }
 
-.facilities h1{
-    /*adjust size and spacing*/
-    padding: 20px;
-    font-size: 40px;
+.facilities h1 {
+  /*adjust size and spacing*/
+  padding: 20px;
+  font-size: 40px;
 }
 
-.facilities h1 strong{
-    /*para gumana hover*/
-    transition: .5s;
+.facilities h1 strong {
+  /*para gumana hover*/
+  transition: 0.5s;
 }
 
-.facilities h1 strong:hover{
-    /*palitan cursor to deafault bali itsura ng normal mouse
+.facilities h1 strong:hover {
+  /*palitan cursor to deafault bali itsura ng normal mouse
     at dito na gagana animation*/
-    cursor: default;
-    color: #eb2f06;
+  cursor: default;
+  color: #eb2f06;
 }
 
-.facilities p{
-    /*adjust size and spacing*/
-    padding: 5px;
-    font-size: large;
+.facilities p {
+  /*adjust size and spacing*/
+  padding: 5px;
+  font-size: large;
 }
 
-.row3{
-    /*flex ulit para pantay yung spacing ng items*/
-    padding: 75px 50px;
-    display: flex;
-    justify-content: space-between;
+.row3 {
+  /*flex ulit para pantay yung spacing ng items*/
+  padding: 75px 50px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.col3{
-    /*same lang command na may lalabas sa pic after*/
-    flex-basis: 30%;
-    border-radius: 10px;
-    margin-bottom: 5px;
-    position: relative;
-    overflow: hidden;
+.col3 {
+  /*same lang command na may lalabas sa pic after*/
+  flex-basis: 30%;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  position: relative;
+  overflow: hidden;
 }
 
-.title2{
-    /*part 2 ng .title*/
-    flex-basis: 30%;
-    border-radius: 10px;
-    width: 100%;
-    height: 63%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: transparent;
-    transition: 1s;
+.title2 {
+  /*part 2 ng .title*/
+  flex-basis: 30%;
+  border-radius: 10px;
+  width: 100%;
+  height: 63%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  transition: 1s;
 }
 
-.title2:hover{
-    /*after effect*/
-    background: rgba(4,9,30,0.7);
+.title2:hover {
+  /*after effect*/
+  background: rgba(4, 9, 30, 0.7);
 }
 
-.title2 h4{
-    /*opacity 0 para maging invisible taz gagalaw ito*/
-    opacity: 0;
-    position: absolute;
-    left: 25%;
-    top: 17.5vh;
-    font-size: 40px;
-    transition: .5s;
+.title2 h4 {
+  /*opacity 0 para maging invisible taz gagalaw ito*/
+  opacity: 0;
+  position: absolute;
+  left: 25%;
+  top: 17.5vh;
+  font-size: 40px;
+  transition: 0.5s;
 }
 
-.title2 h4:hover{
-    /*para lumabas kaya naging 1 opacity*/
-    opacity: 1;
-    color: white;
-    cursor: pointer;
+.title2 h4:hover {
+  /*para lumabas kaya naging 1 opacity*/
+  opacity: 1;
+  color: white;
+  cursor: pointer;
 }
 
-.col3 img{
-    /*image command*/
-    width:100%;
-    height: 40vh;
-    border-radius: 10px;
+.col3 img {
+  /*image command*/
+  width: 100%;
+  height: 40vh;
+  border-radius: 10px;
 }
 
-.col3 p{
-    /*0 lang padding para walang spacing*/
-    padding: 0;
+.col3 p {
+  /*0 lang padding para walang spacing*/
+  padding: 0;
 }
 
-.col3 h3{
-    /*adjust sizing and spacing*/
-    margin-top: 16px;
-    margin-bottom: 15px;
-    text-align: center;
-    font-size: xx-large;
+.col3 h3 {
+  /*adjust sizing and spacing*/
+  margin-top: 16px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: xx-large;
 }
 
 /*Testimonials*/
 
-.testimony{
-    /*command per section*/
-    margin: auto;
-    padding-top: 50px;
-    text-align: center;
-    width: 100%;
+.testimony {
+  /*command per section*/
+  margin: auto;
+  padding-top: 50px;
+  text-align: center;
+  width: 100%;
 }
 
-.testimony h1{
-    /*adjust size and spacing*/
-    padding: 15px;
-    font-size: 60px;
+.testimony h1 {
+  /*adjust size and spacing*/
+  padding: 15px;
+  font-size: 60px;
 }
 
-.testimony h1 strong{
-    /*para gumana hover*/
-    transition: .5s;
+.testimony h1 strong {
+  /*para gumana hover*/
+  transition: 0.5s;
 }
 
-.testimony h1 strong:hover{
-    /*palitan cursor to deafault bali itsura ng normal mouse
+.testimony h1 strong:hover {
+  /*palitan cursor to deafault bali itsura ng normal mouse
     at dito na gagana animation*/
-    cursor: default;
-    color: #eb2f06;
+  cursor: default;
+  color: #eb2f06;
 }
 
-.testimony p{
-    /*adjust size and spacing*/
-    padding: 15px;
-    font-size: large;
+.testimony p {
+  /*adjust size and spacing*/
+  padding: 15px;
+  font-size: large;
 }
 
-.row4{
-    /*flex uli para pantay hati ng items*/
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+.row4 {
+  /*flex uli para pantay hati ng items*/
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
 }
 
-.col4{
-    /*pinaghiwalay ko kasi ayaw gumana ito gumana naman nung pinaghiwalay ko 2 item
+.col4 {
+  /*pinaghiwalay ko kasi ayaw gumana ito gumana naman nung pinaghiwalay ko 2 item
     nag kaspacing tukoy ko hehe*/
-    flex-basis: 45%;
-    border-radius: 10px;
-    margin-bottom: 5px;
-    text-align: left;
-    padding: 25px;
-    display: flex;
-    background: #fceded;
-    cursor: pointer;
+  flex-basis: 45%;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  text-align: left;
+  padding: 25px;
+  display: flex;
+  background: #fceded;
+  cursor: pointer;
 }
 
-.col4 h3{
-    /*adjust spacing and size*/
-    padding-top: 15px;
-    padding-bottom: 5px;
-    text-align: center;
-    font-size: x-large;
+.col4 h3 {
+  /*adjust spacing and size*/
+  padding-top: 15px;
+  padding-bottom: 5px;
+  text-align: center;
+  font-size: x-large;
 }
 
-.col4 p{
-    /*adjust size of text*/
-    font-size: 17px;
+.col4 p {
+  /*adjust size of text*/
+  font-size: 17px;
 }
 
-.col5{
-    /*ito 2nd item na tukoy ko same command naexplain ko na toh kaya no need ulitin*/
-    flex-basis: 45%;
-    border-radius: 10px;
-    margin-bottom: 5px;
-    text-align: left;
-    padding: 25px;
-    display: flex;
-    background: #ffeded;
-    cursor: pointer;
+.col5 {
+  /*ito 2nd item na tukoy ko same command naexplain ko na toh kaya no need ulitin*/
+  flex-basis: 45%;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  text-align: left;
+  padding: 25px;
+  display: flex;
+  background: #ffeded;
+  cursor: pointer;
 }
 
-.col5 h3{
-    /*adjust size and spacing*/
-    padding-top: 15px;
-    padding-bottom: 5px;
-    text-align: center;
-    font-size: x-large;
+.col5 h3 {
+  /*adjust size and spacing*/
+  padding-top: 15px;
+  padding-bottom: 5px;
+  text-align: center;
+  font-size: x-large;
 }
 
-.col5 p{
-    /*adjust size of text*/
-    font-size: 17px;
+.col5 p {
+  /*adjust size of text*/
+  font-size: 17px;
 }
 
-
-.col4 img{
-    /*image command*/
-    height: 75px;
-    margin-left: 5px;
-    margin-right: 30px;
-    border-radius: 30%;
+.col4 img {
+  /*image command*/
+  height: 75px;
+  margin-left: 5px;
+  margin-right: 30px;
+  border-radius: 30%;
 }
-.col5 img{
-    /*anotha image command*/
-    height: 75px;
-    margin-left: 5px;
-    margin-right: 30px;
-    border-radius: 30%;
+.col5 img {
+  /*anotha image command*/
+  height: 75px;
+  margin-left: 5px;
+  margin-right: 30px;
+  border-radius: 30%;
 }
 
-.space{
-    /*para sa fa nakinuha ko na items yung stars na command para gumitna*/
-    display: flex;
-    justify-content: center;
-    color: #f44336;
-    font-size: large;
+.space {
+  /*para sa fa nakinuha ko na items yung stars na command para gumitna*/
+  display: flex;
+  justify-content: center;
+  color: #f44336;
+  font-size: large;
 }
 
 /*contact-us*/
 
-.enroll{
-    /*normal command per section ikaw bahala mag adjust*/
-    margin: 15px auto;
-    width: 80%;
-    background-image:linear-gradient(rgba(4,9,30,0.9),rgba(4,9,30,0.9)), url(Images/call-me.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 10px;
-    text-align: center;
-    padding: 80px 0;
+.enroll {
+  /*normal command per section ikaw bahala mag adjust*/
+  margin: 15px auto;
+  width: 80%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.9), rgba(4, 9, 30, 0.9)),
+    url(Images/call-me.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 80px 0;
 }
 
-.enroll h1{
-    /*change size, spacing and line-height masyado kasi dikit*/
-    font-size: 40px;
-    color: white;
-    padding-bottom: 25px;
-    line-height: 1.5;
+.enroll h1 {
+  /*change size, spacing and line-height masyado kasi dikit*/
+  font-size: 40px;
+  color: white;
+  padding-bottom: 25px;
+  line-height: 1.5;
 }
 
-.enroll h1 strong{
-    /*para gumana hover*/
-    transition: .5s;
+.enroll h1 strong {
+  /*para gumana hover*/
+  transition: 0.5s;
 }
 
-.enroll h1 strong:hover{
-    /*palitan cursor to deafault bali itsura ng normal mouse
+.enroll h1 strong:hover {
+  /*palitan cursor to deafault bali itsura ng normal mouse
     at dito na gagana animation*/
-    cursor: default;
-    color: #ff2f00;
+  cursor: default;
+  color: #ff2f00;
 }
 
 /*Footer*/
 
-.footer{
-    /*per section command*/
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    padding-bottom: 10px;
+.footer {
+  /*per section command*/
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 10px;
 }
 
-.footer h4{
-    /*adjust size and spacing at may transition for hover*/
-    padding: 25px;
-    font-size: 40px;
-    transition: .5s;
+.footer h4 {
+  /*adjust size and spacing at may transition for hover*/
+  padding: 25px;
+  font-size: 40px;
+  transition: 0.5s;
 }
 
-.footer h4:hover{
-    /*palitan cursor to deafault bali itsura ng normal mouse
+.footer h4:hover {
+  /*palitan cursor to deafault bali itsura ng normal mouse
     at dito na gagana animation*/
-    cursor: default;
-    color: #eb2f06;
+  cursor: default;
+  color: #eb2f06;
 }
 
-.footer p{
-    /*adjust size and spacing*/
-    padding-bottom: 15px;
-    font-size: large;
+.footer p {
+  /*adjust size and spacing*/
+  padding-bottom: 15px;
+  font-size: large;
 }
 
-.media{
-    /*adjust size at pinalitan ko cursor ng mouse*/
-    font-size: xx-large;
-    cursor:pointer;
+.media {
+  /*adjust size at pinalitan ko cursor ng mouse*/
+  font-size: xx-large;
+  cursor: pointer;
 }
 
-@media(max-width: 1280px){
-      /*making the image small and float to the left when the width is 1280px*/
-    .image{
-        float:left;
-        width: 400px;
-        height: 110px;
-    }
+@media (max-width: 1280px) {
+  /*making the image small and float to the left when the width is 1280px*/
+  .image {
+    float: left;
+    width: 400px;
+    height: 110px;
+  }
 
-    .h1-course{
-        /*controlling again the size of font*/
-        font-size: 60px;
-        font-weight: 700;
-        padding: 50px 20px 0 20px;
-        color:rgba(255, 255, 255, 0.875);
-    }
+  .h1-course {
+    /*controlling again the size of font*/
+    font-size: 60px;
+    font-weight: 700;
+    padding: 50px 20px 0 20px;
+    color: rgba(255, 255, 255, 0.875);
+  }
 
-  .col{
+  .col {
     /* flex-basis laki ng box border radius controlling the 4 sides of the box added
     some spacing and box size is border-box.*/
     flex-basis: 27.5%;
@@ -673,32 +675,32 @@ padding: 20px;
     border-radius: 30px;
     margin-bottom: 10px;
     padding: 20px 20px;
-    transition: .5s;
-    color: rgba(255, 255, 255, 0.750); 
+    transition: 0.5s;
+    color: rgba(255, 255, 255, 0.75);
     font-size: large;
     font-weight: 400;
-}
+  }
 
-.title h3{
+  .title h3 {
     /*change some position per device*/
     position: absolute;
     left: 35%;
     bottom: 20px;
     color: white;
-    transition: .7s;
+    transition: 0.7s;
     font-size: 30px;
-}
+  }
 
-.title:hover h3{
-      /*change some position per device*/
+  .title:hover h3 {
+    /*change some position per device*/
     position: absolute;
     left: 35%;
     bottom: 50vh;
     font-size: 30px;
-}
+  }
 
-.title2{
-      /*change some position per device*/
+  .title2 {
+    /*change some position per device*/
     flex-basis: 30%;
     border-radius: 10px;
     width: 100%;
@@ -708,93 +710,92 @@ padding: 20px;
     left: 0;
     background: transparent;
     transition: 1s;
-}
+  }
 
-.title2 h4{
+  .title2 h4 {
     /*change some position per device*/
     opacity: 0;
     position: absolute;
     left: 27%;
     top: 17.5vh;
     font-size: x-large;
-    transition: .5s;
-}
+    transition: 0.5s;
+  }
 
-.row4{
+  .row4 {
     /*para pababa hindi horizontal*/
     flex-direction: column;
-    }
-
+  }
 }
 
-@media(max-width: 768px){
-    /*making the image small and float to the left when the width is 768px*/
-    .image{
-        float:left;
-        width: 350px;
-        height: 100px;
-    }
+@media (max-width: 768px) {
+  /*making the image small and float to the left when the width is 768px*/
+  .image {
+    float: left;
+    width: 350px;
+    height: 100px;
+  }
 
-    .row{
-        /*para pababa hindi horizontal*/
-        flex-direction: column;
-    }
+  .row {
+    /*para pababa hindi horizontal*/
+    flex-direction: column;
+  }
 
-    .h1-course{
-        /*controlling again the size of font*/
-        font-size: 40px;
-        font-weight: 700;
-        padding: 50px 20px 0 20px;
-        color:rgba(255, 255, 255, 0.875);
-    }
+  .h1-course {
+    /*controlling again the size of font*/
+    font-size: 40px;
+    font-weight: 700;
+    padding: 50px 20px 0 20px;
+    color: rgba(255, 255, 255, 0.875);
+  }
 
-    .p-course{
-        /*controlling the font and spacing*/
-        font-size: x-large;
-        font-weight: 400;
-        line-height: 25px;
-        padding: 20px 20px 0 ;
-        margin-bottom: 50px;
-        color:rgba(255, 255, 255, 0.875);
-    }
+  .p-course {
+    /*controlling the font and spacing*/
+    font-size: x-large;
+    font-weight: 400;
+    line-height: 25px;
+    padding: 20px 20px 0;
+    margin-bottom: 50px;
+    color: rgba(255, 255, 255, 0.875);
+  }
 
-    .col p{
-        /*to control spacing*/
-        margin-top: 10px;
-        font-size: large;
-    }
-  
-    .col h3{
-        /*gaano kabilis yung animation*/
-    transition: .5s;
+  .col p {
+    /*to control spacing*/
+    margin-top: 10px;
+    font-size: large;
+  }
+
+  .col h3 {
+    /*gaano kabilis yung animation*/
+    transition: 0.5s;
     font-size: x-large;
   }
 
-  .title h3{
-        /*change some position per device*/
+  .title h3 {
+    /*change some position per device*/
     position: absolute;
     left: 40%;
     bottom: 20px;
     color: white;
-    transition: .7s;
+    transition: 0.7s;
     font-size: 40px;
-}
+  }
 
-.title:hover h3{
-      /*change some position per device*/
+  .title:hover h3 {
+    /*change some position per device*/
     position: absolute;
     left: 40%;
     bottom: 50vh;
     font-size: 40px;
-}
+  }
 
-.row2{
+  .row2 {
     /*para pababa hindi horizontal*/
     flex-direction: column;
-}
+  }
 
-.title2{
-      /*change some position per device*/
+  .title2 {
+    /*change some position per device*/
     flex-basis: 30%;
     border-radius: 10px;
     width: 100%;
@@ -804,336 +805,354 @@ padding: 20px;
     left: 0;
     background: transparent;
     transition: 1s;
-}
+  }
 
-.title2 h4{
-      /*change some position per device*/
+  .title2 h4 {
+    /*change some position per device*/
     opacity: 0;
     position: absolute;
     left: 25%;
     top: 17.5vh;
     font-size: large;
-    transition: .5s;
-}
-
-.row4{
-    /*para pababa hindi horizontal*/
-    flex-direction: column;
-    }
-
+    transition: 0.5s;
   }
 
-@media(max-width: 600px){
-    /*controlling the font and image by making it small and float it to the left
+  .row4 {
+    /*para pababa hindi horizontal*/
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  /*controlling the font and image by making it small and float it to the left
     making an animation para maclick yung items kasi masyado maliit di makikita
     via positioning it absolute para fully control location nya -200px para lumabas
     yung position at tatawagin via bar (use javascript dito) z-index para matakpan yung
     mga text sa likod parang tinapalan block or inline-block same lang kung anu gamiten mo
     bat ganyan display para macontrol mo height and width if tanda mo pa customize some
     font sizes and their padding/spacing as well*/
-    .box h1{
-        font-size: 20px;
-    }
-
-    .image{
-        float:left;
-        width: 300px;
-        height: 80px;
-    }
-
-    .box p{
-        padding: 10px 0 40px;
-        font-size: small;
-    }
-
-    .nav-links{
-        position:absolute;
-        background: rgba(4, 9, 30, 0.925);
-        height: 100vh;
-        width: 150px;
-        top: 0;
-        right: -200px;
-        text-align: right;
-        z-index: 1;
-        transition: 1s;
-    }
-
-    .nav-links ul li{
-        display: block;
-    }
-
-    .nav-links ul {
-        padding: 10px;
-    }
-
-    nav .fa{
-        display: block;
-        color: white;
-        font-size: x-large;
-        padding: 10px;
-        text-align: left;
-    }
-
-    .row{
-        /*para pababa hindi horizontal*/
-        flex-direction: column;
-    }
-
-    .h1-course{
-        /*controlling again the size of font*/
-        font-size: xx-large;
-        font-weight: 700;
-        padding: 50px 20px 0 20px;
-        color:rgba(255, 255, 255, 0.875);
-    }
-
-    .p-course{
-        /*controlling the font and spacing*/
-        font-size: large;
-        font-weight: 400;
-        line-height: 22px;
-        padding: 20px 20px 0 ;
-        margin-bottom: 50px;
-        color:rgba(255, 255, 255, 0.875);
-    }
-
-    .col p{
-        /*to control spacing*/
-        margin-top: 10px;
-        font-size: medium;
-    }
-  
-    .col h3{
-        /*gaano kabilis yung animation*/
-    transition: .5s;
-    font-size: large;
+  .box h1 {
+    font-size: 20px;
   }
 
-  .title h3{
-        /*change some position per device*/
+  .image {
+    float: left;
+    width: 300px;
+    height: 80px;
+  }
+
+  .box p {
+    padding: 10px 0 40px;
+    font-size: small;
+  }
+
+  .nav-links {
     position: absolute;
-    left: 32%;
-    bottom: 20px;
+    background: rgba(4, 9, 30, 0.925);
+    height: 100vh;
+    width: 150px;
+    top: 0;
+    right: -200px;
+    text-align: right;
+    z-index: 1;
+    transition: 1s;
+  }
+
+  .nav-links ul li {
+    display: block;
+  }
+
+  .nav-links ul {
+    padding: 10px;
+  }
+
+  nav .fa {
+    display: block;
     color: white;
-    transition: .7s;
-    font-size: xx-large;
-}
-
-.title:hover h3{
-      /*change some position per device*/
-    position: absolute;
-    left: 32%;
-    bottom: 50vh;
-    font-size: xx-large;
-}
-
-.row2{
-    /*para pababa hindi horizontal*/
-    flex-direction: column;
-}
-
-.row3{
-    /*para pababa hindi horizontal*/
-    flex-direction: column;
-}
-
-.title2{
-    /*remove animation kasi buggy*/
- display: none;
+    font-size: x-large;
+    padding: 10px;
+    text-align: left;
   }
 
-  .row4{
-      /*para pababa hindi horizontal*/
+  .row {
+    /*para pababa hindi horizontal*/
     flex-direction: column;
-    }
-}
+  }
 
-@media(max-width: 320px){
-    /*making the image small and float to the left when the width is 320px*/
-    .image{
-        float:left;
-        width: 235px;
-        height: 65px;
-    }
+  .h1-course {
+    /*controlling again the size of font*/
+    font-size: xx-large;
+    font-weight: 700;
+    padding: 50px 20px 0 20px;
+    color: rgba(255, 255, 255, 0.875);
+  }
 
-    .row{
-        /*para pababa hindi horizontal*/
-        flex-direction: column;
-    }
+  .p-course {
+    /*controlling the font and spacing*/
+    font-size: large;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 20px 20px 0;
+    margin-bottom: 50px;
+    color: rgba(255, 255, 255, 0.875);
+  }
 
-    .h1-course{
-        /*controlling again the size of font*/
-        font-size: x-large;
-        font-weight: 700;
-        padding: 50px 20px 0 20px;
-        color:rgba(255, 255, 255, 0.875);
-    }
-
-    .p-course{
-        /*controlling the font and spacing*/
-        font-size: medium;
-        font-weight: 400;
-        line-height: 22px;
-        padding: 20px 20px 0 ;
-        margin-bottom: 50px;
-        color:rgba(255, 255, 255, 0.875);
-    }
-
-    .col p{
-        /*to control spacing*/
-        margin-top: 10px;
-        font-size: small;
-    }
-  
-    .col h3{
-        /*gaano kabilis yung animation*/
-    transition: .5s;
+  .col p {
+    /*to control spacing*/
+    margin-top: 10px;
     font-size: medium;
   }
 
-  .title h3{
-        /*change some position per device*/
+  .col h3 {
+    /*gaano kabilis yung animation*/
+    transition: 0.5s;
+    font-size: large;
+  }
+
+  .title h3 {
+    /*change some position per device*/
+    position: absolute;
+    left: 32%;
+    bottom: 20px;
+    color: white;
+    transition: 0.7s;
+    font-size: xx-large;
+  }
+
+  .title:hover h3 {
+    /*change some position per device*/
+    position: absolute;
+    left: 32%;
+    bottom: 50vh;
+    font-size: xx-large;
+  }
+
+  .row2 {
+    /*para pababa hindi horizontal*/
+    flex-direction: column;
+  }
+
+  .row3 {
+    /*para pababa hindi horizontal*/
+    flex-direction: column;
+  }
+
+  .title2 {
+    /*remove animation kasi buggy*/
+    display: none;
+  }
+
+  .row4 {
+    /*para pababa hindi horizontal*/
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 320px) {
+  /*making the image small and float to the left when the width is 320px*/
+  .image {
+    float: left;
+    width: 235px;
+    height: 65px;
+  }
+
+  .row {
+    /*para pababa hindi horizontal*/
+    flex-direction: column;
+  }
+
+  .h1-course {
+    /*controlling again the size of font*/
+    font-size: x-large;
+    font-weight: 700;
+    padding: 50px 20px 0 20px;
+    color: rgba(255, 255, 255, 0.875);
+  }
+
+  .p-course {
+    /*controlling the font and spacing*/
+    font-size: medium;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 20px 20px 0;
+    margin-bottom: 50px;
+    color: rgba(255, 255, 255, 0.875);
+  }
+
+  .col p {
+    /*to control spacing*/
+    margin-top: 10px;
+    font-size: small;
+  }
+
+  .col h3 {
+    /*gaano kabilis yung animation*/
+    transition: 0.5s;
+    font-size: medium;
+  }
+
+  .title h3 {
+    /*change some position per device*/
     position: absolute;
     left: 25%;
     bottom: 20px;
     color: white;
-    transition: .7s;
+    transition: 0.7s;
     font-size: xx-large;
-}
+  }
 
-.title:hover h3{
-      /*change some position per device*/
+  .title:hover h3 {
+    /*change some position per device*/
     position: absolute;
     left: 25%;
     bottom: 50vh;
     font-size: xx-large;
-}
+  }
 
-.row2{
+  .row2 {
     /*para pababa hindi horizontal*/
     flex-direction: column;
-}
+  }
 
-.row3{
+  .row3 {
     /*para pababa hindi horizontal*/
     flex-direction: column;
-}
+  }
 
-.title2{
+  .title2 {
     /*remove animation kasi buggy*/
-display: none;
-    }
+    display: none;
+  }
 
-.row4{
+  .row4 {
     /*para pababa hindi horizontal*/
     flex-direction: column;
-    }
+  }
 }
 
 /*log_in*/
 
-.intro_login{
-    height: 100vh;
-    background: linear-gradient(#ffffff,#C7232B);
+.intro_login {
+  height: 100vh;
+  background: linear-gradient(#ffffff, #c7232b);
 }
 
-.login_nav{
-    width:100%;
-    height: 10vh;
-    background: radial-gradient(#ffffff,#830001); 
-    background-attachment: fixed;
-    padding: 3px 0;
+.login_nav {
+  width: 100%;
+  height: 10vh;
+  background: radial-gradient(#ffffff, #830001);
+  background-attachment: fixed;
+  padding: 3px 0;
 }
 
-.id_login{
-    font-weight: 700;
-    font-size: 25px;
-    position: absolute;
-    left: 42.5%;
-    top: 14%;
+.id_login {
+  font-weight: 700;
+  font-size: 25px;
+  position: absolute;
+  left: 42.5%;
+  top: 14%;
 }
 
-.flexbox-container_login{
-    display:flex;
+.flexbox-container_login {
+  display: flex;
 }
 
-.flex-item_login{
-    padding: 0 2em 1.1em 2em;
-    height: 281px;
-    width: 426.5px;
-    border: 1px solid black;
-    background-color: rgba(0, 0, 0,0.6);
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    margin-top: -195px;
-    margin-left: -238.5px;
-    border-radius: 4px;
-    border-style: none;
-    box-shadow: 2px 2px 14px 7px #000;
-}
-.footer_login{
-    font-size: x-small;
-    text-align:center;
-    position: relative;
-    top:75%;
-    line-height: 1.5;
+.flex-item_login {
+  padding: 0 2em 1.1em 2em;
+  height: 281px;
+  width: 426.5px;
+  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  margin-top: -195px;
+  margin-left: -238.5px;
+  border-radius: 4px;
+  border-style: none;
+  box-shadow: 2px 2px 14px 7px #000;
 }
 
-.footer_login hr{
-    margin: 1.5em 0;
-    border: 1px dashed #777;
+.flex-item_login_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
 }
 
-.user_login{
-    color: white;
-    font-size: .9em;
-    font-weight: 600;
-    padding: 14px 0;
+.footer_login {
+  font-size: x-small;
+  text-align: center;
+  position: relative;
+  top: 75%;
+  line-height: 1.5;
 }
 
-.sign-in_login{
-    padding: .7em 0;
+.footer_login hr {
+  margin: 1.5em 0;
+  border: 1px dashed #777;
+}
+
+.user_login {
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 14px 0;
+}
+
+.user_back {
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 14px 0;
+  text-decoration: none;
+}
+
+.sign-in_login {
+  padding: 0.7em 0;
 }
 
 .sign-in_login > input,
-.sign-in_login > select{
-    width:98%;
-    padding: 0.5em 0.5em;
-    font-size: 0.8em;
-    font-family: 'Open Sans',sans-serif, helvetica, arial;
-    outline: none;
-    border: 1px solid transparent;
-    transition: all 250ms ease-out;
-  }
-
-.info_login{
-    font-size: .8em;
-    color:white;
+.sign-in_login > select {
+  width: 98%;
+  padding: 0.5em 0.5em;
+  font-size: 0.8em;
+  font-family: "Open Sans", sans-serif, helvetica, arial;
+  outline: none;
+  border: 1px solid transparent;
+  transition: all 250ms ease-out;
 }
 
-.forgot_login{
-    font-size: .75em;
+.info_login {
+  font-size: 0.8em;
+  color: white;
 }
 
-.red_login{
-    background: #b71921;
-    border: 1px solid #eee;
-    color: #eee;
-    font-size: small;
-    min-width: 6em;
-    padding: 0.5em;
-    cursor: pointer;
-  }
+.forgot_login {
+  font-size: 0.75em;
+}
 
-  .divider_login{
-      display: flex;
-      justify-content: space-between;
-      padding: 5px;
-  }
+.red_login {
+  background: #b71921;
+  border: 1px solid #eee;
+  color: #eee;
+  font-size: small;
+  min-width: 6em;
+  padding: 0.5em;
+  cursor: pointer;
+}
 
-  .img_login{
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 50%;
-    float: right;
-  }
+.divider_login {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.img_login {
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  float: right;
+}
